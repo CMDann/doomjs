@@ -1,0 +1,18 @@
+# YOLO Studio Edge Agent Configuration
+# Copy this file to the Jetson/Xavier/Raspberry Pi alongside jetson_agent.py
+# and edit the values below before starting the agent.
+
+# Network settings
+host: "0.0.0.0"          # Listen on all interfaces; change to specific IP if needed
+port: 8765                # WebSocket port — must match the setting in YOLO Studio
+
+# Security — generate a long random string, e.g.: python -c "import secrets; print(secrets.token_hex(32))"
+auth_token: "CHANGE_ME_TO_A_SECURE_RANDOM_TOKEN"
+
+# Storage paths on the edge device
+model_cache_dir: "/home/user/yolo_models"   # Where received .pt files are stored
+output_dir: "/home/user/yolo_results"        # Where inference results are saved
+
+# Logging
+log_file: "agent.log"     # Path relative to the working directory
+log_level: "INFO"         # DEBUG | INFO | WARNING | ERROR

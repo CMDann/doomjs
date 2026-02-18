@@ -1,0 +1,36 @@
+# YOLO Studio — Python dependencies
+# Install with: pip install -r requirements.txt
+# Requires Python 3.10+
+
+# ── GUI ──────────────────────────────────────────────────────────────────────
+PyQt6>=6.6,<7.0
+PyQt6-Qt6>=6.6,<7.0
+pyqtgraph>=0.13,<1.0
+qtawesome>=1.3,<2.0          # Icon fonts (Font Awesome, Material Design, etc.)
+
+# ── Computer Vision ──────────────────────────────────────────────────────────
+ultralytics>=8.3,<9.0        # YOLOv8 / YOLOv11 training & inference
+opencv-python>=4.9,<5.0
+Pillow>=10.3,<11.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+SQLAlchemy>=2.0,<3.0
+
+# ── Remote Communication ─────────────────────────────────────────────────────
+websockets>=12.0,<14.0       # Async WebSocket client/server
+aiohttp>=3.9,<4.0            # HTTP for health checks and REST calls
+
+# ── External APIs ────────────────────────────────────────────────────────────
+roboflow>=1.1,<2.0           # Roboflow Universe SDK
+huggingface_hub>=0.23,<1.0   # HuggingFace Hub client
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+PyYAML>=6.0,<7.0             # data.yaml generation and agent_config parsing
+numpy>=1.26,<2.0
+requests>=2.31,<3.0
+tqdm>=4.66,<5.0              # Progress bars in CLI and training callbacks
+
+# ── Edge Agent (install on Jetson/Pi only) ───────────────────────────────────
+# websockets is already listed above — it powers the server side too.
+# torch and torchvision should be installed from the device-specific wheel.
+# ultralytics is already listed above.

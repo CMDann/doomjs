@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "yolo-studio"
+version = "0.1.0"
+description = "Professional desktop application for training, managing, and remotely deploying YOLO computer vision models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "YOLO Studio Contributors" }]
+keywords = ["yolo", "computer-vision", "deep-learning", "pyqt6", "object-detection"]
+
+dependencies = [
+    "PyQt6>=6.6,<7.0",
+    "pyqtgraph>=0.13,<1.0",
+    "qtawesome>=1.3,<2.0",
+    "ultralytics>=8.3,<9.0",
+    "opencv-python>=4.9,<5.0",
+    "Pillow>=10.3,<11.0",
+    "SQLAlchemy>=2.0,<3.0",
+    "websockets>=12.0,<14.0",
+    "aiohttp>=3.9,<4.0",
+    "roboflow>=1.1,<2.0",
+    "huggingface_hub>=0.23,<1.0",
+    "PyYAML>=6.0,<7.0",
+    "numpy>=1.26,<2.0",
+    "requests>=2.31,<3.0",
+    "tqdm>=4.66,<5.0",
+]
+
+[project.scripts]
+yolo-studio = "yolo_studio.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yolo_studio*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true

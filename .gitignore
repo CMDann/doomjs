@@ -1,0 +1,59 @@
+# YOLO Studio — .gitignore
+
+# ── Secrets & local config ────────────────────────────────────────────────────
+config.json
+.env
+*.env
+
+# ── Model weights ────────────────────────────────────────────────────────────
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+saved_models/
+
+# ── Datasets & training artifacts ────────────────────────────────────────────
+datasets/
+runs/
+yolo_models/
+yolo_results/
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+.env/
+
+# ── Build & distribution ──────────────────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+agent.log
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
